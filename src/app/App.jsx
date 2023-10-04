@@ -7,8 +7,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Bot, Loader2, Power } from "lucide-react";
 import React, { useEffect, useState } from "react";
+import liff from "@line/liff";
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [serverStatus, setServerStatus] = useState("รอสักครู่...");
@@ -113,6 +115,16 @@ export default function App() {
           )}
           <small className="text-neutral-500">{serverStatus}</small>
         </span>
+        <Button
+          onClick={() => {
+            liff.logout();
+            window.location.reload();
+          }}
+          size="sm"
+          variant="secondary"
+        >
+          ออกจากระบบ
+        </Button>
       </CardFooter>
     </Card>
   );
