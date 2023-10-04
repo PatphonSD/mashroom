@@ -76,9 +76,9 @@ export default function App() {
         <CardTitle>ฟาร์มเห็ดอัจฉริยะ</CardTitle>
         <CardDescription>ควบคุมได้อย่างง่ายดายโดยไอ้เหี้ยกี้</CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-row gap-4 justify-center items-center">
+      <CardContent className="flex flex-col md:flex-row gap-4 justify-center items-center">
         <button
-          className={`p-4 transition-all active:scale-95 border rounded-md shadow ${
+          className={`p-4 transition-all flex flex-col items-center w-full md:w-auto active:scale-95 border rounded-md shadow ${
             mode === "on" && "bg-green-500"
           }`}
           onClick={() => changeMode("power")}
@@ -89,7 +89,7 @@ export default function App() {
           </small>
         </button>
         <button
-          className={`p-4 transition-all active:scale-95 border rounded-md shadow ${
+          className={`p-4 transition-all flex flex-col items-center w-full md:w-auto active:scale-95 border rounded-md shadow ${
             mode === "auto" && "bg-blue-500"
           }`}
           onClick={() => changeMode("auto")}
