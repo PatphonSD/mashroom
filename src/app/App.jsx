@@ -12,7 +12,6 @@ import { Bot, Loader2, Power } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import liff from "@line/liff";
 export default function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [serverStatus, setServerStatus] = useState("รอสักครู่...");
   const [mode, setMode] = useState("");
   const changeMode = (e) => {
@@ -74,7 +73,7 @@ export default function App() {
     <Card className="w-[350px]">
       <CardHeader>
         <CardTitle>ฟาร์มเห็ดอัจฉริยะ</CardTitle>
-        <CardDescription>ควบคุมได้อย่างง่ายดายโดยไอ้เหี้ยกี้</CardDescription>
+        <CardDescription>ควบคุมได้อย่างง่ายดายด้วยปลายนิ้ว</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col md:flex-row gap-4 justify-center items-center">
         <button
