@@ -5,6 +5,9 @@
 
 const char* url = "https://bokee.vercel.app/mqtt";  // URL ของ API
 
+const char* ssid     = "ใส่ชื่อไวไฟ";
+const char* password = "ใส่รหัสไวไฟ";
+
 void setup() {
   pinMode(13, OUTPUT);
   pinMode(2, OUTPUT);
